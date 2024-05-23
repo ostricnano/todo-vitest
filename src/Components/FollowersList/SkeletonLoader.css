@@ -1,0 +1,50 @@
+
+/* SkeletonLoader.css */
+.skeleton-loader {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 10px;
+  background: linear-gradient(90deg, rgba(221,221,221,1) 0%, rgba(255,255,255,1) 100%);
+  border-radius: 5px;
+}
+
+.skeleton-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #ababab99;
+  margin-right: 10px;
+}
+
+.skeleton-text {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+
+.skeleton-fullname {
+  display: flex;
+  width: 100%;
+  gap: 15px;
+}
+
+.skeleton-name,
+.skeleton-lastname {
+  width: 80%;
+  height: 20px;
+  background-color: #ddd;
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
+
+.skeleton-name {
+  width: 60%;
+}
+.skeleton-username{
+  height: 20px;
+  background-color: #ddd;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  width: 40%;
+}

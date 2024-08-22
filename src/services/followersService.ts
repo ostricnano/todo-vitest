@@ -1,5 +1,14 @@
 import axios from "axios"
+import { createResource } from "../utils/createResource"
 
 export const getFollowers = async () => {
-  return await axios.get("https://randomuser.me/api/?results=10")
+  try {
+    const response = await axios.get("https://randomuser.me/api/?results=10")
+    return await response.data
+  } catch (error) {
+    console.log(error)
+  }
 }
+
+
+export const followersResource = createResource(getFollowers());

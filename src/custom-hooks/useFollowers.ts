@@ -9,7 +9,7 @@ export const useFollowers = () => {
     setLoading(true);
     try {
       const response = await getFollowers()
-      setFollowers(response.data.results)
+      setFollowers(response.results)
     } catch (error) {
       console.error(error)  
     } finally {

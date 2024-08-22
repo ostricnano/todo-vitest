@@ -1,16 +1,24 @@
 import { Title } from '../Title/Title'
 import { FollowersList } from '../FollowersList/FollowersList'
 import { SearchInput } from '../SearchInput/SearchInput'
-import { useState } from 'react';
 import { useFollowers } from '../../custom-hooks/useFollowers';
-import { filteredFollowers } from '../../utils/functions';
+import {  filteredFollowers } from '../../utils/functions';
 import './Followers.css'
+import { useState } from 'react';
+
 
 export const Followers = () => {
   const [search, setSearch] = useState<string>("");
   const { followers, loading } = useFollowers();
 
   const searchFollowers = filteredFollowers(followers, search);
+
+  // const filteredFollowersResource = {
+  //   read() {
+  //     const followers = followersResource.read();
+  //     return followers.results;
+  //   }
+  // };
 
   return (
     <div className="followers" data-testid='followers'>
@@ -20,9 +28,8 @@ export const Followers = () => {
         setSearch={setSearch}
       />
       <FollowersList 
-        followers={searchFollowers} 
-        loading={loading} 
-        
+        followers={searchFollowers}
+        loading={loading}
       />
     </div>
   )
